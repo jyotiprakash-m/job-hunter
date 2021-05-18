@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* https://colorhunt.co/palette/179373 -- dark color */
+/* https://colorhunt.co/palette/130807 -- white color */
+:root {
+    --dbg1: #222831;
+    --dbg2: #30475e;
+    --dtext1: #f2a365;
+    --dtext2: #ececec;
+    
+    --wbg1: #f7f7f7;
+    --wbg2: #eeeeee;
+    --wtext1: #393e46;
+    --wtext2: #929aab;
+  
+  }
+*, :after, :before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Oswald, sans-serif;
+  background: var(--dbg1);
+}
+.app{
+  margin: 0 5vw;
+
+}
