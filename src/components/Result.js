@@ -4,7 +4,13 @@ function Result({ darkMode }) {
     const [term, setTerm] = useState("node")
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch(`/positions.json?search=${term}`)
+        fetch(`/positions.json?search=${term}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+
+        })
             .then((response) => response.json())
             .then((json) => setPosts(json))
     }, [term]);
@@ -22,9 +28,9 @@ function Result({ darkMode }) {
                 {posts.map((post, index) => {
                     return (
                         index < 20 &&
-                        <div className="post__container">
+                        <div key={post.id} className="post__container">
                             <a href={post.url} target="_blank" rel="noreferrer">
-                                <div key={post.id} className={darkMode ? "post darkbg2" : "post lightbg2"}>
+                                <div className={darkMode ? "post darkbg2" : "post lightbg2"}>
                                     <div className="post__top">
                                         <div className="post__logo">
                                             <img src={post.company_logo} alt="" />
