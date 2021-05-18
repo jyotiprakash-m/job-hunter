@@ -18,6 +18,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+a{
+  text-decoration:none;
+}
 .app{
   font-family: Oswald, sans-serif;
   min-height: 100vh;
@@ -131,6 +134,9 @@
   }
 
   /* Design result */
+  .result{
+    padding-bottom: 20px;
+  }
   .result__InputContainer{
     display: flex;
     width: 40vw;
@@ -138,6 +144,7 @@
     height: 40px;
     border: 2px solid var(--wtext1);
     border-radius: 5px;
+    
   }
   .result__Input{
     width:100%
@@ -162,11 +169,87 @@
   .result__InputLogo > img{
     width:100%;
   }
+  .officialsite{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 10px;
+  }
 
+  /* Design Post */
+.posts{
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  /* align-items: center; */
+  justify-content:center;
+  margin-top: 25px;
+  /* margin-bottom: 25px; */
+}
+.post__container{
+  border-radius: 5px;
 
+}
+.post{
+  width:400px;
+  padding: 10px;
 
-  @media only screen and (max-width:900px){
+}
+.post__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__type{
+  display: flex;
+  align-items: center;
+}
+.typeCircle{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  margin-right: 5px;
+  background-color:rebeccapurple;
+}
+.green{
+  background-color:rgb(41, 228, 41);
+}
+.orange{
+  background-color:orange;
+}
+  .post__logo{
+    width:40px;
+  }
+  .post__logo > img{
+    width:100%;
+  }
+.officialsite  a{
+  padding:3px 10px;
+  border-radius: 5px;
+}
+.heading{
+  font-size:20px;
+}
+.company,.companyurl{
+  font-size:15px;
+}
+
+@media only screen and (max-width:900px){
     .result__InputContainer{
       width:90vw;
     }
-  }
+}
+@media only screen and (max-width:450px){
+    .post{
+      width:380px;
+    }
+    .result__InputContainer{
+      position: sticky;
+      top: 5px;
+    }
+}
+@media only screen and (max-width:400px){
+    .post{
+      width:330px;
+    }
+}
+  
