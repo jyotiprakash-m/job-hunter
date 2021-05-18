@@ -4,7 +4,7 @@ function Result({ darkMode }) {
     const [term, setTerm] = useState("node")
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch(`/positions.json?search=${term}`, {
+        fetch(`https://jobs.github.com/positions.json?search=${term}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
