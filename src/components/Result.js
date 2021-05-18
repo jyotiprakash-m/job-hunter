@@ -4,7 +4,11 @@ function Result({ darkMode }) {
     const [term, setTerm] = useState("node")
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch(`/positions.json?search=${term}`)
+        fetch(`/positions.json?search=${term}`, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
             .then((response) => response.json())
             .then((json) => setPosts(json))
     }, [term]);
